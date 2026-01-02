@@ -35,18 +35,9 @@ app.get('/api/projects', async (req, res) => {
   }
 });
 
-// 4. SEED ROUTE (Visit http://localhost:5001/seed once to add data)
-app.get('/seed', async (req, res) => {
-  try {
-    await Project.deleteMany({});
-    await Project.create([
-      { title: "The Overhang Fin", grade: "V6", status: "75% - Stuck on final dyno" },
-      { title: "Technical Corner", grade: "5.11d", status: "Projecting - Needs heel hook" }
-    ]);
-    res.send("Database Seeded!");
-  } catch (err) {
-    res.status(500).send("Error seeding database");
-  }
+
+app.get('/', (req, res) => {
+  res.send('Server is up and running!');
 });
 
 app.listen(PORT, () => {
