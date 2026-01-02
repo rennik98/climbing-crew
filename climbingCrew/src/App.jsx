@@ -11,6 +11,8 @@ const Footer = () => (
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   return (
     <Router>
