@@ -1,51 +1,132 @@
-# climbing-crew
-Climbing Crew: Track every send, refine your technique, and visualize your journey to the next grade.
-# 🧗 Climbing Crew
-**Send today. Log today. Better tomorrow.**
+🧗‍♂️ Climbing Crew
 
-Climbing Crew is a dedicated repository for tracking climbing progression, managing projects, and analyzing performance data. This repo serves as a digital logbook to bridge the gap between "just climbing" and intentional training.
+Track every send, refine your technique, and visualize your climbing journey.
 
----
+Climbing Crew is a full-stack web application built for climbers who want to track their training progress, manage climbing projects, and analyze performance over time. Whether you’re working on a hard project or logging regular gym sessions, Climbing Crew keeps everything organized in one place.
 
-## 🚀 Quick Dashboard
-* **Current Focus:** Power Endurance & Slab Technique
-* **Current Max Grade:** V6 / 5.12a
-* **Yearly Goal:** Consistent V7 / 5.12c
-* **Next Milestone:** Complete the "Blue Circuit" at the local gym.
+🚀 Features
+🔐 User Authentication
 
----
+Secure sign up and login system
 
-## 📂 Repository Structure
-* `📂 sessions/` - Daily logs, conditions, and "try-hard" levels.
-* `📂 projects/` - Beta notes, photos, and move-by-move breakdowns for goal routes.
-* `📂 training/` - Hangboard protocols, strength stats, and mobility routines.
-* `📂 data/` - CSV files for tracking grade volume and performance over time.
+Authentication handled using JSON Web Tokens (JWT)
 
----
+📊 Dashboard Overview
 
-## 📝 How to Log a Session
-To maintain consistency, use the template located in `templates/session-log.md`. 
+View total climbing sessions
 
-### Key Data Points to Track:
-1. **The Vibe:** Energy levels and mental state.
-2. **The Stats:** Total volume (how many routes) and peak intensity.
-3. **The Beta:** Specific movements or "aha!" moments that led to a send.
-4. **The "Why":** If a project didn't go, was it finger strength, technique, or fear?
+Track your highest grade sent
 
----
+See total training time at a glance
 
-## 📈 Current Projects
-| Route/Problem | Grade | Style | Status | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| The Overhang Fin | V6 | Power | 75% | Stuck on the final dyno |
-| Technical Corner | 5.11d | Slab | Projecting | Needs precise heel hook |
+🧗 Project Management
 
----
+Create and manage climbing projects (routes or boulders)
 
-## 🛠 Tech & Tools
-* **Markdown:** For structured, readable logs.
-* **GitHub Projects:** Used as a Kanban board for "To-Do" routes.
-* **Obsidian/VS Code:** Recommended editors for local logging.
+Log grade, number of attempts, and project status
+(In Progress / Sent)
 
----
-*"The best climber is the one having the most fun... and taking the best notes."*
+Visualize your completed “send” list
+
+📝 Session Tracking
+
+Log detailed training sessions
+
+Keep a complete history of your workouts and progress
+
+📱 Responsive Design
+
+Fully responsive UI
+
+Optimized for both desktop and mobile using TailwindCSS
+
+🛠️ Tech Stack
+Frontend
+
+React
+
+Vite
+
+TailwindCSS
+
+Chart.js / React-Chartjs-2
+
+Lucide React (Icons)
+
+Backend
+
+Node.js
+
+Express.js
+
+MongoDB with Mongoose
+
+JWT (JSON Web Tokens)
+
+⚙️ Installation & Setup
+
+Follow the steps below to run the project locally.
+
+✅ Prerequisites
+
+Node.js installed
+
+MongoDB (local installation or MongoDB Atlas)
+
+📦 1. Clone the Repository
+git clone https://github.com/rennik98/climbing-crew.git
+cd climbing-crew
+
+🖥️ 2. Backend Setup
+
+Navigate to the server folder and install dependencies:
+
+cd server
+npm install
+
+
+Create a .env file inside the server directory and add the following:
+
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+
+
+Start the backend server:
+
+npm start
+
+
+Or, for development with nodemon:
+
+npm run dev
+
+
+The backend will run on:
+
+http://localhost:5000
+
+🌐 3. Frontend Setup
+
+Open a new terminal and navigate to the frontend folder:
+
+cd ../climbingCrew
+npm install
+
+
+Start the frontend development server:
+
+npm run dev
+
+
+The frontend will be available at:
+
+http://localhost:5173
+
+✅ Final Notes
+
+Make sure MongoDB is running before starting the backend
+
+Both frontend and backend must be running simultaneously
+
+This project is ideal for learning full-stack development with the MERN stack
